@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bollywood Restaurant - Oyonnax</title>
+    
+    <!-- Google Fonts: Playfair Display (Serif) & Lato (Sans-serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FFFDD0',
+                        gold: '#D4AF37',
+                        'deep-maroon': '#800000',
+                        'dark-maroon': '#4a0000',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom decorative styles */
+        .ornamental-border {
+            border: 2px solid #D4AF37;
+            position: relative;
+        }
+        .ornamental-border::after {
+            content: '';
+            position: absolute;
+            top: 4px; left: 4px; right: 4px; bottom: 4px;
+            border: 1px solid #D4AF37;
+            pointer-events: none;
+        }
+        .gold-line {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+            width: 100px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="bg-cream text-gray-800 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-cream/95 backdrop-blur-sm border-b border-gold/30 shadow-sm transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <!-- Simple Elephant Icon Placeholder -->
+                    <svg class="w-8 h-8 text-deep-maroon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/> <!-- Abstract shape replacement -->
+                    </svg>
+                    <span class="font-serif text-2xl font-bold text-deep-maroon tracking-wide">BOLLYWOOD</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-deep-maroon hover:text-gold font-serif transition">Accueil</a>
+                    <a href="#menu" class="text-deep-maroon hover:text-gold font-serif transition">Menu</a>
+                    <a href="#contact" class="text-deep-maroon hover:text-gold font-serif transition">Contact</a>
+                    <a href="#menu" class="bg-deep-maroon text-cream px-5 py-2 rounded-sm font-serif hover:bg-dark-maroon transition shadow-md">
+                        Commander
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-deep-maroon hover:text-gold focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cream border-t border-gold/30">
+            <a href="#home" class="block py-3 px-4 text-deep-maroon hover:bg-gold/10">Accueil</a>
+            <a href="#menu" class="block py-3 px-4 text-deep-maroon hover:bg-gold/10">Menu</a>
+            <a href="#contact" class="block py-3 px-4 text-deep-maroon hover:bg-gold/10">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Decorative Background Elements -->
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+        
+        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <!-- Elephant Motif Decoration -->
+            <div class="mb-6 flex justify-center">
+                <svg class="w-16 h-16 text-gold" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L2 22h20L12 2zm0 3.5L18.5 20H5.5L12 5.5zM11 16h2v2h-2v-2zm0-6h2v4h-2v-4z"/>
+                </svg>
+            </div>
+            
+            <h1 class="font-serif text-5xl md:text-7xl font-bold text-deep-maroon mb-4 drop-shadow-sm">
+                Bollywood Restaurant
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-700 font-serif tracking-widest mb-10 uppercase">
+                Taste of India
+            </p>
+            
+            <a href="#menu" class="inline-block border-2 border-deep-maroon text-deep-maroon px-10 py-3 font-serif font-bold text-lg hover:bg-deep-maroon hover:text-cream transition duration-300 ease-in-out shadow-lg">
+                View Menu
+            </a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 px-4 bg-cream relative">
+        <div class="max-w-5xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl text-deep-maroon mb-4">Notre Menu</h2>
+                <div class="gold-line mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto font-sans">
+                    Découvrez les saveurs authentiques de l'Inde préparées avec des épices fraîches et des ingrédients de qualité.
+                </p>
+            </div>
+
+            <!-- Menu Container with Ornamental Border -->
+            <div class="ornamental-border p-6 md:p-12 bg-white/50 shadow-xl rounded-sm">
+                
+                <!-- Starters -->
+                <div class="mb-12">
+                    <h3 class="font-serif text-2xl text-deep-maroon border-b border-gold/40 pb-2 mb-6 flex justify-between items-center">
+                        Starters <span class="text-sm font-sans text-gray-500">Entrées</span>
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-baseline border-b border-dashed border-gold/20 pb-2">
+                            <div>
+                                <span class="font-bold text-lg text-gray-800">Samosa Légumes</span>
+                                <span class="ml-2 text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full">VEG</span>
+                            </div>
+                            <span class="font-bold text-deep-maroon text-lg">6,00€</span>
+                        </div>
+                        <div class="flex justify-between items-baseline border-b border-dashed border-gold/20 pb-2">
+                            <div>
+                                <span class="font-bold text-lg text-gray-800">Mix Pakora</span>
+                                <span class="ml-2 text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full">VEG</span>
+                            </div>
+                            <span class="font-bold text-deep-maroon text-lg">5,00€</span>
+                        </div>
+                        <div class="flex justify-between items-baseline">
+                            <div>
+                                <span class="font-bold text-lg text-gray
