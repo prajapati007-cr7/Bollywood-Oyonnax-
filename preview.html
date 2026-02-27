@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bollywood Restaurant | Taste of India</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: "#FFFDD0",
+            gold: "#D4AF37",
+            maroon: "#6D071A"
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-cream text-maroon font-body">
+
+<!-- HERO SECTION -->
+<section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative">
+
+  <!-- Decorative Border -->
+  <div class="absolute inset-4 border-4 border-gold pointer-events-none"></div>
+
+  <div class="mb-6 text-5xl">🐘</div>
+
+  <h1 class="text-4xl md:text-6xl font-heading text-maroon mb-4">
+    Bollywood Restaurant
+  </h1>
+
+  <p class="text-xl md:text-2xl mb-8 text-gold font-semibold">
+    Taste of India
+  </p>
+
+  <a href="#menu"
+     class="bg-gold text-maroon px-8 py-3 rounded-full text-lg font-medium hover:bg-maroon hover:text-cream transition duration-300 shadow-lg">
+     View Menu
+  </a>
+
+</section>
+
+
+<!-- MENU SECTION -->
+<section id="menu" class="py-16 px-6 md:px-20">
+
+  <h2 class="text-3xl md:text-4xl font-heading text-center mb-12 border-b-4 border-gold inline-block pb-2">
+    Our Menu
+  </h2>
+
+  <div class="grid md:grid-cols-2 gap-12 mt-10">
+
+    <!-- Starters -->
+    <div>
+      <h3 class="text-2xl font-heading mb-4 text-gold">Starters</h3>
+      <ul class="space-y-2">
+        <li class="flex justify-between border-b border-gold pb-1">
+          <span>Samosa Légumes <span class="text-green-700 text-xs font-semibold ml-1">VG</span></span>
+          <span>6,00€</span>
+        </li>
+        <li class="flex justify-between border-b border-gold pb-1">
+          <span>Mix Pakora <span class="text-green-700 text-xs font-semibold ml-1">VG</span></span>
+          <span>5,00€</span>
+        </li>
+        <li class="flex justify-between border-b border-gold pb-1">
+          <span>Poulet Tandoori 🌶</span>
+          <span>6,50€</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Chicken -->
+    <div>
+      <h3 class="text-2xl font-heading mb-4 text-gold">Poulet (Chicken)</h3>
+      <ul class="space-y-2">
+        <li class="flex justify-between border-b border-gold pb-1">
+          <span>Butter Chicken</span>
+          <span>14,00€</span>
+        </li>
+        <li class="flex justify-between border-b border-gold pb-1">
+          <span>Poulet Tikka Masala 🌶</span>
+          <span>14,00€</span>
+        </li>
+        <li class="flex justify-between border-b border-gold pb-1">
+          <span>Poulet Vindaloo 🌶🌶</span>
+          <span>14,00€</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Lamb -->
+    <div>
+      <h3 class="text-2xl font-heading mb-4 text-gold">Agneau (Lamb)</h3>
+      <ul class="space-y-2">
+        <li class="flex justify-between border-b border-gold pb-1">
+          <span>Agneau Curry 🌶</span>
+          <span>15,00€</span>
+        </li>
+        <li class="flex justify-between border-b border-gold pb-1">
+          <span>Agneau Masala</span>
+          <span>16,00€</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Sea Food -->
+    <div>
+      <h3 class="text-2xl font-heading mb-4 text-gold">Sea Food</h3>
+      <ul class="space-y-2">
+        <li class="flex justify-between border-b border-gold pb-1">
+          <span>Crevette Masala 🌶</span>
+          <span>16,00€</span>
+        </li>
+        <li class="flex justify-between border-b border-gold pb-1">
+          <span>Saumon Tikka Masala</span>
+          <span>17,00€</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Biryani -->
+    <div>
+      <h3 class="text-2xl font-heading mb-4 text-gold">Biryani</h3>
+      <ul class="space-y-2">
+        <li class="flex justify-between border-b border-gold pb-1">
+          <span>Poulet Biryani 🌶</span>
+          <span>16,00€</span>
+        </li>
+        <li class="flex justify-between border-b border-gold pb-1">
+          <span>Mix Légumes Biryani <span class="text-green-700 text-xs font-semibold ml-1">VEGAN</span></span>
+          <span>18,00€</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Vegetarian -->
+    <div>
+      <h3 class="text-2xl font-heading mb-4 text-gold">Vegetarian (Sabji)</h3>
+      <ul class="space-y-2">
+        <li class="flex justify-between border-b border-gold pb-1">
+          <span>Aloo Matar <span class="text-green-700 text-xs font-semibold ml-1">VEGAN</span></span>
+          <span>11,00€</span>
+        </li>
+        <li class="flex justify-between border-b border-gold pb-1">
+          <span>Chana Dal <span class="text-green-700 text-xs font-semibold ml-1">VEGAN</span></span>
+          <span>11,00€</span>
+        </li>
+        <li class="flex justify-between border-b border-gold pb-1">
+          <span>Palak Paneer <span class="text-green-700 text-xs font-semibold ml-1">VG</span></span>
+          <span>13,00€</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Breads -->
+    <div>
+      <h3 class="text-2xl font-heading mb-4 text-gold">Breads</h3>
+      <ul class="space-y-2">
+        <li class="flex justify-between border-b border-gold pb-1">
+          <span>Naan Nature</span>
+          <span>3,00€</span>
+        </li>
+        <li class="flex justify-between border-b border-gold pb-1">
+          <span>CheeseNaan</span>
+          <span>4,00€</span>
+        </li>
+        <li class="flex justify-between border-b border-gold pb-1">
+          <span>Bollywood Naan</span>
+          <span>4,50€</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-maroon text-cream text-center py-8 mt-16">
+  <div class="text-xl mb-2">🐘</div>
+  <p class="font-semibold">Bollywood Restaurant</p>
+  <p>4, Rue Jules Michelet, Oyonnax 01100</p>
+  <p class="mt-3 text-sm">
+    Please notify us of any food allergies / restrictions
+  </p>
+</footer>
+
+</body>
+</html>
